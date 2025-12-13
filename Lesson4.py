@@ -27,3 +27,30 @@ cv2.imshow("rectangle in space", space_r)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
+#drawing a circle on an image
+#properties for circle
+color = 154,87,50
+thickness = -1
+radius = 30
+centre_coords = 400,200
+#drawing the circle
+space_c = cv2.circle(space, centre_coords,radius,color,thickness)
+cv2.imshow("circle in space", space_c)
+#Wait and destroy
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+#typing text on an image
+#properties for text
+text = "Hello,world"
+thickness = 4
+color = 155,170,125
+topleft = 80, 80
+fontstyle = cv2.FONT_HERSHEY_DUPLEX
+fontscale = 2
+#typing text 
+space_t = cv2.putText(space, text,topleft,fontstyle,fontscale,color,thickness,cv2.LINE_AA)
+cv2.imshow("Text in space", space_t)
+#Wait and destroy
+cv2.waitKey(0)
+cv2.destroyAllWindows()
